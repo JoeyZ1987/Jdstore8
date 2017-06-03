@@ -18,24 +18,18 @@
  @import "bootstrap";
  @import "font-awesome";
 
- .jumbotron {
-  background-image:url('end.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 60px;
-  margin-bottom: 0;
-}
 
-.title {
-  font-family: "Helvetica Neue", "Microsoft Yahei", 字体;
-  text-align: center;
-  margin-top: 60px;
-  margin-bottom: 40px;
-}
+// .title {
+//   font-family: "Helvetica Neue", "Microsoft Yahei", 字体;
+//   text-align: center;
+//   margin-top: 60px;
+//   margin-bottom: 40px;
+// }
 
 .navbar-default {
     margin-bottom: 0;
     border-radius: 0;
+
 }
 
 html {
@@ -43,25 +37,18 @@ html {
    min-height: 100%;
  }
 
- body {
-   /* Margin bottom by footer height */
-   margin-bottom: 100px;
- }
+ // body {
+ //   /* Margin bottom by footer height */
+ //   margin-bottom: 100px;
+ // }
 
  .footer {
-   position: absolute;
-   bottom: 0;
+   position: relative;
    width: 100%;
    /* Set the fixed height of the footer here */
-   height: 150px;
-   background-color: #686868;
-   margin: 0 -15px;
-
-   p {
-      color: white;
-     margin-top: 65px;
-   }
-  }
+   height: 10em;
+   background-color: #202020;
+}
 
   /*5种背景颜色*/
 .bg-color1 {
@@ -101,35 +88,34 @@ html {
 }
 
 
-/*商品详情*/
-.productDecription {
-	width: 100%;
-  text-align: center;
-	margin: 20px auto;
-  line-height: 20px;
-}
-
-.productDecription-menuList {
-	height: 20px;
-}
-
-.productDecription-menuList-item {
-	float: left;
-	width: 25%;
-	height: 35px;
-}
-
-.productDecription-content {
-	width: 100%;
-  height: 550px;
-  margin: 0;
-}
-
-.productDecription-content-item {
-  display: none;
-  width: 100%;
-  height: 550px;
-}
+// /*商品详情*/
+// .problemDescription {
+// 	width: 100%;
+//   text-align: center;
+// }
+//
+// .problemDescription-menuList {
+//   height: 40px;
+// }
+//
+// .problemDescription-menuList-item {
+// 	float: left;
+// 	width: 32%;
+// 	height: 35px;
+//   margin-left: 1%
+// }
+//
+// .problemDescription-content {
+// 	width: 100%;
+//   height: 550px;
+//   margin: 0;
+// }
+//
+// .problemDescription-content-item {
+//   display: none;
+//   width: 100%;
+//   height: 550px;
+// }
 
 // 弹窗
 @import url(http://fonts.googleapis.com/css?family=Roboto);
@@ -228,3 +214,132 @@ html {
 .login-help{
   font-size: 12px;
 }
+
+//------所有的按钮 css 样式------
+
+.btn.btn-primary{
+    color: #ffffff;
+    cursor: pointer;
+    background: #a91b0c;
+    display: inline-block;
+    box-shadow: 0 2px 4px #961b0c;
+}
+
+.btn.btn-head {
+    font-weight: 300;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 15px 55px;
+    white-space: nowrap;
+    letter-spacing: 6px;
+}
+
+.btn.btn-normal {
+    font-weight: 300;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 10px 35px;
+    white-space: nowrap;
+    letter-spacing: 3px;
+}
+
+.btn.btn-round {
+  border-radius: 30px;
+}
+
+.tabs {
+	width: 100%;
+  text-align: center;
+}
+
+.nav-tabs  {
+  width: 100%;
+  border-bottom: 2px solid #a91b0c;
+}
+
+
+.nav-tabs > li {
+  float:left;
+  width: 32%;
+  margin-left: 1%;
+  margin-bottom: -1px;
+}
+.nav-tabs > li > a {
+  border-radius: 4px 4px 0 0;
+  color: #ef1b0c;
+  background-color: #474949;
+  font-weight:400;
+}
+.nav-tabs > li > a:hover {
+  border-color: #a91b0c #a91b0c #a91b0c;
+  background-color: #000;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #fff;
+  background-color: #a91b0c;
+  border: 1px solid #a91b0c;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+
+//------所有间距 CSS 样式------
+
+.space{
+  margin: 5% 0% 4%;
+}
+
+.space-bottom{
+  margin: 0% 0% 4%;
+}
+
+//------所有的标题 CSS 样式------
+h2 {
+    font-size: 1.8em;
+    color: #333;
+    font-weight: 600;
+    position: relative;
+    text-align: center;
+    top: 0;
+    margin: 1em 0;
+  }
+
+  h3 {
+      font-size: 1.5em;
+      color: #333;
+      font-weight: 600;
+      position: relative;
+      text-align: center;
+      top: 0;
+      margin: 1em 0;
+    }
+
+  p.text {
+    font-size: 1.2em;
+    color: #777;
+    font-weight: 400;
+    line-height: 34px;
+    position: relative;
+    text-align: center;
+    top: 0;
+    margin: 0.5em 0;
+    padding: 0 2em;
+}
+
+p.text-center {
+  font-size: 1em;
+  color: #777;
+  font-weight: 400;
+  line-height: 34px;
+  position: relative;
+  text-align: center;
+  top: 0;
+  padding: 2em;
+}
+
+//------全局响应式布局 CSS ------
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+ }

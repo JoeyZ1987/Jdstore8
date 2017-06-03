@@ -2,11 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// ------ 头部幻灯片 css ------
+
 .bs-slider{
     overflow: hidden;
-    max-height: 700px;
+    max-height: 900px;
     position: relative;
-    background: #000000;
+    margin-bottom: 5em;
+    // background: #000000;
 }
 .bs-slider:hover {
     cursor: -moz-grab;
@@ -22,7 +25,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.40);
+    background-color: rgba(0, 0, 0, 0.25);
 }
 .bs-slider > .carousel-inner > .item > img,
 .bs-slider > .carousel-inner > .item > a > img {
@@ -30,9 +33,7 @@
     width: 100% !important;
 }
 
-/********************
-*****Slide effect
-**********************/
+//Slide effect 幻灯片动效
 
 .fade {
     opacity: 1;
@@ -66,11 +67,8 @@
 }
 
 
+//LEFT/RIGHT ROUND CONTROL 幻灯片左右按钮
 
-
-
-
-/*---------- LEFT/RIGHT ROUND CONTROL ----------*/
 .control-round .carousel-control {
     top: 47%;
     opacity: 0;
@@ -116,79 +114,54 @@
 
 
 
-/*---------- INDICATORS CONTROL ----------*/
+// INDICATORS CONTROL 幻灯片指示器样式
+
 .indicators-line > .carousel-indicators{
-    right: 45%;
-    bottom: 3%;
-    left: auto;
-    width: 90%;
-    height: 20px;
-    font-size: 0;
-    overflow-x: auto;
-    text-align: right;
-    overflow-y: hidden;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 1px;
-    white-space: nowrap;
+    position: absolute;
+    bottom: 5%;
+    top:auto;
+    margin: 1px 2px;
+    width: 50%;
+    left:25%;
+    right:25%;
+
 }
 .indicators-line > .carousel-indicators li{
-    padding: 0;
-    width: 15px;
-    height: 15px;
-    border: 1px solid rgb(158, 158, 158);
-    text-indent: 0;
-    overflow: hidden;
-    text-align: left;
-    position: relative;
-    letter-spacing: 1px;
-    background: rgb(158, 158, 158);
-    -webkit-font-smoothing: antialiased;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    margin-right: 5px;
-    -webkit-transition: all 0.5s cubic-bezier(0.22,0.81,0.01,0.99);
-    transition: all 0.5s cubic-bezier(0.22,0.81,0.01,0.99);
-    z-index: 10;
-    cursor:pointer;
+    width: 6px;
+    height: 6px;
+    margin: 0 2px;
+    background: #fff;
+    opacity: 0.5;
 }
-.indicators-line > .carousel-indicators li:last-child{
-    margin-right: 0;
-}
+// .indicators-line > .carousel-indicators li:last-child{
+//     // margin-right: 0;
+// }
 .indicators-line > .carousel-indicators .active{
-    margin: 1px 5px 1px 1px;
-    box-shadow: 0 0 0 2px #fff;
-    background-color: transparent;
-    position: relative;
-    -webkit-transition: box-shadow 0.3s ease;
-    -moz-transition: box-shadow 0.3s ease;
-    -o-transition: box-shadow 0.3s ease;
-    transition: box-shadow 0.3s ease;
-    -webkit-transition: background-color 0.3s ease;
-    -moz-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
+    width: 48px;
+    height: 6px;
+    opacity: 0.8;
 
 }
-.indicators-line > .carousel-indicators .active:before{
-    transform: scale(0.5);
-    background-color: #fff;
-    content:"";
-    position: absolute;
-    left:-1px;
-    top:-1px;
-    width:15px;
-    height: 15px;
-    border-radius: 50%;
-    -webkit-transition: background-color 0.3s ease;
-    -moz-transition: background-color 0.3s ease;
-    -o-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
-}
+// .indicators-line > .carousel-indicators .active:before{
+    // transform: scale(0.5);
+    // background-color: #fff;
+    // content:"";
+    // position: absolute;
+    // left:-1px;
+    // top:-1px;
+    // width:15px;
+    // height: 15px;
+    // border-radius: 50%;
+    // -webkit-transition: background-color 0.3s ease;
+    // -moz-transition: background-color 0.3s ease;
+    // -o-transition: background-color 0.3s ease;
+    // transition: background-color 0.3s ease;
+// }
 
 
 
-/*---------- SLIDE CAPTION ----------*/
+//SLIDE CAPTION 幻灯片文字样式
+
 .slide_style_left {
     text-align: left !important;
 }
@@ -200,154 +173,247 @@
 }
 
 .slide-text {
-    left: 0;
-    top: 25%;
-    right: 0;
-    margin: auto;
-    padding: 10px;
     position: absolute;
-    text-align: left;
+    top: 30%;
+    left:0;
+    right:0;
     padding: 10px 85px;
 
 }
 
 .slide-text > h1 {
 
-    padding: 0;
     color: #ffffff;
-    font-size: 70px;
-    font-style: normal;
-    line-height: 84px;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-    display: inline-block;
-    -webkit-animation-delay: 0.7s;
-    animation-delay: 0.7s;
+    text-shadow: 0 4px 10px #555;
+    font-size:4.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    letter-spacing: 0.3em;
+    // display: inline-block;
+    // -webkit-animation-delay: 0.7s;
+    // animation-delay: 0.7s;
+    // font-style: normal;
+    // line-height: 4em;
+    // padding: 0;
 }
 .slide-text > p {
-    padding: 0;
     color: #ffffff;
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: 300;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-    -webkit-animation-delay: 1.1s;
-    animation-delay: 1.1s;
+    font-weight: 350;
+    text-shadow: 0 0 6px #555;
+    font-size: 2em;
+    margin-bottom: 5em;
+    letter-spacing: 0.1em;
+    // -webkit-animation-delay: 1.1s;
+    // animation-delay: 1.1s;
+    // line-height: 24px;
+    // padding: 0;
 }
-.slide-text > a.btn-default{
-    color: #000;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
-    margin-right: 10px;
+// .slide-text > a.btn-default{
+    // color: #000;
+    // font-weight: 400;
+    // font-size: 13px;
+    // line-height: 15px;
+    // margin-right: 10px;
+    // text-align: center;
+    // padding: 17px 30px;
+    // white-space: nowrap;
+    // letter-spacing: 1px;
+    // display: inline-block;
+    // border: none;
+    // text-transform: uppercase;
+    // -webkit-animation-delay: 2s;
+    // animation-delay: 2s;
+    // -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    // transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+// }
+
+// .slide-text > a.btn-primary{
+//     color: #ffffff;
+//     cursor: pointer;
+//     font-weight: 350;
+//     font-size: 1.2em;
+//     text-align: center;
+//     padding: 17px 55px;
+//     white-space: nowrap;
+//     letter-spacing: 6px;
+//     background: #a91b0c;
+//     display: inline-block;
+// }
+    // line-height: 15px;
+    // margin-left: 10px;
+    // text-decoration: none;
+    // text-transform: uppercase;
+    // border: none;
+    // -webkit-animation-delay: 2s;
+    // animation-delay: 2s;
+    // -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    // transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+
+// .slide-text > a:hover,
+// .slide-text > a:active {
+//     color: #ffffff;
+//     background: #222222;
+//     -webkit-transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+//     transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+// }
+
+
+//------intro 第二个模块------
+
+.intro {
+    overflow: hidden;
+    max-height: 600px;
+    position: relative;
+    background: #fbfbfb;
+    margin-bottom: 5em;
+}
+
+
+//------problems 第三个模块------
+
+.problems {
+    overflow: hidden;
+    max-height: 900px;
+    position: relative;
+    margin-bottom: 5em;
+}
+
+.intro > a {
+    position: relative;
     text-align: center;
-    padding: 17px 30px;
-    white-space: nowrap;
-    letter-spacing: 1px;
-    display: inline-block;
-    border: none;
-    text-transform: uppercase;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-    -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    margin: 0.5em 0;
+}
 
-}
-.slide-text > a.btn-primary{
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 15px;
-    margin-left: 10px;
-    text-align: center;
-    padding: 17px 30px;
-    white-space: nowrap;
-    letter-spacing: 1px;
-    background: #00bfff;
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    border: none;
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
-    -webkit-transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-.slide-text > a:hover,
-.slide-text > a:active {
-    color: #ffffff;
-    background: #222222;
-    -webkit-transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
-    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+//------service 第四个模块------
+
+.service {
+    overflow: hidden;
+    max-height: 600px;
+    position: relative;
+    margin-bottom: 5em;
 }
 
 
-
-
-
-
-/*------------------------------------------------------*/
-/* RESPONSIVE
-/*------------------------------------------------------*/
-
-@media (max-width: 991px) {
-    .slide-text h1 {
-        font-size: 40px;
-        line-height: 50px;
-        margin-bottom: 20px;
-    }
-    .slide-text > p {
-
-        font-size: 18px;
-    }
+.img-sqr {
+    width: 150px;
+    height:150px;
+    margin: 2em 0 1em;
 }
 
+
+.img-circle {
+    border-radius: 75px;
+    width: 150px;
+    height:150px;
+    margin: 2em 0 1em;
+}
+
+//------recommend 第五个模块------
+
+.recommend {
+    overflow: hidden;
+    max-height: 600px;
+    position: relative;
+    margin-bottom: 5em;
+}
+
+//------endpic 第六个模块------
+
+.endpic {
+  // min-height:10em;
+  background-color: #000;
+  background-image:url('end.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 35%;
+  height: 20em;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+
+.pic{
+  font-size: 2.5em;
+  text-shadow: 0 0 10px #555;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 6px;
+  position: relative;
+  text-align: center;
+  margin: 2em 0 0;
+}
+
+.endpic a {
+  position: relative;
+  margin: 3em 0 2em;
+}
+
+// ------RESPONSIVE 响应式布局------
 
 /*---------- MEDIA 480px ----------*/
+@media  (max-width: 992px) {
+    .slide-text h1 {
+        font-size: 4em;
+        margin-bottom: 0.5em;
+        letter-spacing: 0.3em;
+    }
+    .slide-text > p {
+        font-size: 1.8em;
+        margin-bottom: 4.5em;
+    }
+    .slide-text > a.btn-primary{
+      font-weight: 350;
+      font-size: 1.2em;
+      padding: 15px 50px;
+      letter-spacing: 5px;
+    }
+
+}
+
+
 @media  (max-width: 768px) {
     .slide-text {
         padding: 10px 50px;
     }
     .slide-text h1 {
-        font-size: 30px;
-        line-height: 40px;
-        margin-bottom: 10px;
+        font-size: 3em;
+        margin-bottom: 0.5em;
+        letter-spacing: 0.3em;
     }
     .slide-text > p {
-        font-size: 14px;
-        line-height: 20px;
-        margin-bottom: 20px;
+        font-size: 1.5em;
+        margin-bottom: 4em;
     }
-    .control-round .carousel-control{
-        display: none;
+    .slide-text > a.btn-primary{
+      font-weight: 300;
+      font-size: 1.1em;
+      padding: 10px 30px;
+      letter-spacing: 4px;
     }
 
 }
 @media  (max-width: 480px) {
     .slide-text {
-        padding: 10px 30px;
+        padding: 0 30px;
     }
     .slide-text h1 {
-        font-size: 20px;
-        line-height: 25px;
-        margin-bottom: 5px;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+        letter-spacing: 0.3em;
     }
     .slide-text > p {
-        font-size: 12px;
-        line-height: 18px;
-        margin-bottom: 10px;
+        font-size: 1.2em;
+        margin-bottom: 3em;
     }
     .slide-text > a.btn-default,
     .slide-text > a.btn-primary {
-        font-size: 10px;
-        line-height: 10px;
-        margin-right: 10px;
-        text-align: center;
+        font-size: 0.8em;
         padding: 10px 15px;
     }
     .indicators-line > .carousel-indicators{
+        display: none;
+    }
+
+    .control-round .carousel-control{
         display: none;
     }
 
